@@ -1,0 +1,21 @@
+{
+  "name": "DeepSite Local 🧠",
+  "description": "Fully local DeepSite with backend using HuggingFace model locally.",
+  "version": "1.0.0",
+  "scripts": {
+    "install": [
+      "git clone https://huggingface.co/spaces/enzostvs/deepsite frontend",
+      "cd frontend && npm install",
+      "pip install -r backend/requirements.txt"
+    ],
+    "run": [
+      "start cmd /k \"cd backend && python app.py\"",
+      "cd frontend && npm run build && npm start"
+    ]
+  },
+  "requirements": {
+    "node": ">=18",
+    "python": ">=3.8"
+  },
+  "entrypoint": "http://localhost:3000"
+}
